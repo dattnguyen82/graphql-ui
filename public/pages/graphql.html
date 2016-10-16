@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <legend>GraphQL Query</legend>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Query</div>
+                <div class="panel-body">
+                    <textarea style="min-width: 100%; min-height: 240px;" ng-model="query"></textarea>
+                    <div align="right">
+                        <button type="button" class="btn btn-info" ng-click="submitQuery()">
+                            Submit Query
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-heading">Query Results</div>
+                <div class="panel-body">
+                    <div align="center" ng-show="showSpinner"> <i class="fa fa-cog fa-spin fa-5x fa-fw" style="color: #0d6aad"></i></div>
+                    <pre ng-show="showResults">{{response}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

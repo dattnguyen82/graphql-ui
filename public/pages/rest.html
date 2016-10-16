@@ -1,0 +1,60 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <legend>REST APIs</legend>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <!-- Default panel contents -->
+                <div class="panel-heading">API</div>
+                <div class="panel-body">
+
+                    <a href="#/rest">/enterprises</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites/{site_id}</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites/{site_id}/segments</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites/{site_id}/segments/{segment_id}</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites/{site_id}/segments/{segment_id}/assets</a><br>
+
+                    <br>
+                    <a href="#/rest">/enterprises/{enterprise_id}/sites/{site_id}/segments/{segment_id}/assets/{asset_id}</a><br>
+
+                    <br>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="/api" ng-model="api">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="callApi()">submit</button>
+      </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-heading">REST Results</div>
+                <div class="panel-body">
+                    <div align="center" ng-show="showSpinner"> <i class="fa fa-cog fa-spin fa-5x fa-fw" style="color: #0d6aad"></i></div>
+                    <pre ng-show="showResults">{{response}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

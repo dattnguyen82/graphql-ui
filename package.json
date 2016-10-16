@@ -1,0 +1,23 @@
+{
+  "name": "graphql-ui",
+  "version": "0.0.1",
+  "description": "GraphQL UI Sample app",
+  "main": "serve",
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3"
+  },
+  "engines": {
+    "node": "0.12.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dattnguyen82/graphql-ui.git"
+  },
+  "keywords": [
+    "graphql"
+  ]
+}

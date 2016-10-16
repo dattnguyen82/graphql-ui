@@ -1,0 +1,56 @@
+<legend>GraphQL Schema</legend>
+<pre>
+type Enterprise
+{
+    id: Int
+    name: String
+    description: String
+    sites: [Site]
+    segments: [Segment]
+    assets: [Asset]
+}
+
+type Site
+{
+    id: Int
+    name: String
+    description: String
+    enterpriseId: Int
+    segments: [Segment]
+    assets: [Asset]
+}
+
+type Segment
+{
+    id: Int
+    name: String
+    description: String
+    siteId: Int
+    assets: [Asset]
+}
+
+type Asset
+{
+    id: Int
+    name: String
+    description: String
+    segmentId: Int
+}
+
+type Query
+{
+    asset(id: Int): Asset
+    assets: [Asset]
+    segment(id: Int): Segment
+    segments: [Segment]
+    site(id: Int): Site
+    sites: [Site]
+    enterprise(id: Int): Enterprise
+    enterprises: [Enterprise]
+}
+
+schema
+{
+    query: Query
+}
+</pre>

@@ -14,9 +14,8 @@ angular.module('graphql.services', ['graphql.config'])
         return $http({method: 'GET', url: schemaUrl});
       };
 
-      gqlAPI.submitQuery = function(query, args)
+      gqlAPI.submitQuery = function(data)
       {
-          var data = {"query": query, "args": args};
         return $http({
           method: 'POST',
           data: data,

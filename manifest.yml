@@ -1,0 +1,4 @@
+---
+applications:
+- name: graphql-ui
+  buildpack: nodejs_buildpack

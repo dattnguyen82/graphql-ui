@@ -29,14 +29,14 @@ angular.module('gql.controller.graphql', [])
         $scope.showResults = false;
         $scope.showSpinner = true;
         console.log($scope.query);
-        gql_services.submitQuery( $scope.query, $scope.args ).success(function (response)
+
+        var data = {"query": $scope.query};
+
+        if ($scope.args != null && $scope.args!="")
+            data["args"] = $scope.args;
+
+        gql_services.submitQuery( data ).success(function (response)
         {
-
-            var data = {"query": query};
-
-            if ($scope.args != null)
-                data["args"] = args;
-
             $scope.showResults = true;
             $scope.showSpinner = false;
             $scope.response = JSON.stringify(response, null, 5);

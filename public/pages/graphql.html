@@ -10,7 +10,25 @@
                 <!-- Default panel contents -->
                 <div class="panel-heading">Query</div>
                 <div class="panel-body">
-                    <textarea style="min-width: 100%; min-height: 240px;" ng-model="query"></textarea>
+                    <textarea style="min-width: 100%; min-height: 240px; font-style: bold; font-size: larger" ng-model="query">{{query}}</textarea>
+                    <input type="text" class="form-control" placeholder="/api" ng-model="args">
+                    <br>
+                    <div align="right">
+                        <select class="selectpicker" ng-model="selectQuery" ng-change="updateQuery()">
+                            <option value="query1">Get Enterprises</option>
+                            <option value="query2">Get Enterprises w/ sites</option>
+                            <option value="query3">Get Enterprises w/ segments</option>
+                            <option value="query4">Get Enterprises w/ assets</option>
+                            <option value="query5">Get Sites w/ segments</option>
+                            <option value="query6">Get Sites w/ segments and assets</option>
+                            <option value="query7">Get Multiple Assets</option>
+                            <option value="query8">Get Asset w/ Variable</option>
+                            <option value="query9">Get Segment w/ Directive</option>
+                            <option value="query10">Mutator</option>
+                        </select>
+                        </div>
+                    <br>
+
                     <div align="right">
                         <button type="button" class="btn btn-info" ng-click="submitQuery()">
                             Submit Query

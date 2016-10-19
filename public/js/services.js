@@ -14,11 +14,12 @@ angular.module('graphql.services', ['graphql.config'])
         return $http({method: 'GET', url: schemaUrl});
       };
 
-      gqlAPI.submitQuery = function(query)
+      gqlAPI.submitQuery = function(query, args)
       {
+          var data = {"query": query, "args": args};
         return $http({
           method: 'POST',
-          data: query,
+          data: data,
           url:queryUrl
         });
       };
